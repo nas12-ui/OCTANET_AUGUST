@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: lightgray;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav:hover {
+    background-color: goldenrod;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 6px 12px;
+    border: 2px solid bisque;
+    margin: 0 5px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #444;
+}
+
+ul li a:hover {
+    background-color: #FFD700;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    max-width: 800px;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about:hover {
+    transform: scale(1.05);
+}
+
+.about h1 {
+    color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.about h4 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px 0 10px;
+    font-size: 26px;
+}
+
+.about p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: lightgray;
+    margin: 10px 0 20px;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    .about {
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about h4 {
+        font-size: 22px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+}
